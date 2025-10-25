@@ -1,0 +1,5 @@
+{
+  "name": "Improve My City MERN",
+  "description": "A civic issue reporting platform where citizens can report local problems, track their resolution, and see who the top contributors are in their community. This app provides a user-friendly interface for both citizens and administrators to manage and resolve civic issues efficiently.",
+  "requestFramePermissions": []
+}

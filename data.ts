@@ -1,0 +1,72 @@
+
+import { User, Complaint, ComplaintStatus } from './types';
+
+export const mockUsers: User[] = [
+    { id: 'user-1', name: 'John Doe', email: 'john@example.com', role: 'user', submittedIssues: 3, resolvedIssues: 2 },
+    { id: 'user-2', name: 'Jane Smith', email: 'jane@example.com', role: 'user', submittedIssues: 5, resolvedIssues: 5 },
+    { id: 'user-3', name: 'Admin User', email: 'admin@example.com', role: 'admin', submittedIssues: 0, resolvedIssues: 0 },
+    { id: 'user-4', name: 'Peter Jones', email: 'peter@example.com', role: 'user', submittedIssues: 2, resolvedIssues: 1 },
+    { id: 'user-5', name: 'Mary Johnson', email: 'mary@example.com', role: 'user', submittedIssues: 4, resolvedIssues: 3 },
+];
+
+export const mockComplaints: Complaint[] = [
+    {
+        id: 'CMPT-001',
+        title: 'Broken Streetlight on Main St',
+        description: 'The streetlight at the corner of Main St and 1st Ave has been out for three days.',
+        location: { lat: 34.0522, lng: -118.2437, address: '123 Main St, Los Angeles, CA' },
+        imageUrl: 'https://picsum.photos/seed/streetlight/800/600',
+        status: ComplaintStatus.RESOLVED,
+        userId: 'user-1',
+        userEmail: 'john@example.com',
+        createdAt: new Date('2023-10-01T10:00:00Z'),
+        updatedAt: new Date('2023-10-05T14:30:00Z'),
+    },
+    {
+        id: 'CMPT-002',
+        title: 'Large Pothole on Oak Avenue',
+        description: 'There is a large, dangerous pothole in the middle of Oak Avenue that needs to be filled.',
+        location: { lat: 34.0530, lng: -118.2445, address: '456 Oak Ave, Los Angeles, CA' },
+        imageUrl: 'https://picsum.photos/seed/pothole/800/600',
+        status: ComplaintStatus.IN_PROGRESS,
+        userId: 'user-2',
+        userEmail: 'jane@example.com',
+        createdAt: new Date('2023-10-20T12:00:00Z'),
+        updatedAt: new Date('2023-10-22T09:00:00Z'),
+    },
+    {
+        id: 'CMPT-003',
+        title: 'Overflowing Trash Can at City Park',
+        description: 'The main trash can near the playground at City Park is overflowing and attracting pests.',
+        location: { lat: 34.0550, lng: -118.2460, address: '789 Park Rd, Los Angeles, CA' },
+        imageUrl: 'https://picsum.photos/seed/trash/800/600',
+        status: ComplaintStatus.PENDING,
+        userId: 'user-1',
+        userEmail: 'john@example.com',
+        createdAt: new Date('2023-10-25T08:45:00Z'),
+        updatedAt: new Date('2023-10-25T08:45:00Z'),
+    },
+    {
+        id: 'CMPT-004',
+        title: 'Graffiti on library wall',
+        description: 'The west wall of the public library has been vandalized with spray paint.',
+        location: { lat: 34.0500, lng: -118.2500, address: '101 Library Ln, Los Angeles, CA' },
+        imageUrl: 'https://picsum.photos/seed/graffiti/800/600',
+        status: ComplaintStatus.PENDING,
+        userId: 'user-5',
+        userEmail: 'mary@example.com',
+        createdAt: new Date('2023-10-26T11:00:00Z'),
+        updatedAt: new Date('2023-10-26T11:00:00Z'),
+    },
+     {
+        id: 'CMPT-005',
+        title: 'Leaking Fire Hydrant',
+        description: 'A fire hydrant on the corner of Elm and Pine is leaking a steady stream of water.',
+        location: { lat: 34.0580, lng: -118.2490, address: '222 Elm St, Los Angeles, CA' },
+        status: ComplaintStatus.RESOLVED,
+        userId: 'user-2',
+        userEmail: 'jane@example.com',
+        createdAt: new Date('2023-09-15T15:20:00Z'),
+        updatedAt: new Date('2023-09-18T10:00:00Z'),
+    },
+];
